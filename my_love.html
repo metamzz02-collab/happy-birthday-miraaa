@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Hanin!</title>
+  <style>
+  
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      
+      background: url("kotak.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 350px;
+      animation: fadeIn 1.5s ease;
+      }
+
+#message1,
+#message2,
+#message3 {
+  max-width: 420px;
+  padding: 24px;
+  margin: 0 12px;
+
+  background-image: url("bgpinkk.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+
+  text-align: justify;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+#message p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+    h3 {
+  color: #ff5e78;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+h2 {
+  color: #ff2f55;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h1 {
+color: #e8ebea;
+  font-size: 20px;
+  font-weight: 400;
+    line-height: 1.7;
+  margin-bottom: 10px;
+  max-width: 420px;
+  padding: 24px;
+  margin: 0 12px;
+  }
+
+
+    p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #ff5e78;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff2f55;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff5e78;
+      font-size: 20px;
+      animation: float 4s linear infinite;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+    
+    .fade-in {
+  opacity: 1;
+  animation: fadeInMessage 0.9s ease;
+}
+
+@keyframes fadeInMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #ff5e78;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hidden-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.8s ease;
+}
+
+.memory-photo {
+  width: 92vw;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* OUTRO */
+.disintegrate {
+  animation: dustFade 3s ease forwards;
+}
+
+@keyframes dustFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(-40px) scale(1.06);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.secret-btn {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+
+  width: 180px;
+  height: 50px;
+
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+
+  z-index: 9999;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  animation: fadeInBtn 1.2s ease forwards;
+}
+
+  .secret-btn {
+  animation:
+    fadeInBtn 1.2s ease forwards,
+    pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -60%) scale(1); }
+  50% { transform: translate(-50%, -60%) scale(1.05); }
+  100% { transform: translate(-50%, -60%) scale(1); }
+}
+
+/* SCENE */
+#candleScene {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* KUE */
+.cake {
+  width: 180px;
+  height: 110px;
+  background: linear-gradient(#ffb6c1, #ff8fab);
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TOP KUE */
+.cake::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: #ffd1dc;
+  border-radius: 20px 20px 0 0;
+}
+
+/* LILIN */
+.candle {
+  width: 14px;
+  height: 55px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 6px,
+    #ff9a9e 6px,
+    #ff9a9e 12px
+  );
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+}
+
+.flame {
+  width: 18px;
+  height: 26px;
+  background: radial-gradient(circle, #ffe082 0%, #ff9800 60%, transparent 70%);
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+.flame.off {
+  animation: blowOut 0.8s ease forwards;
+}
+
+@keyframes blowOut {
+  to {
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.flame {
+  width: 14px;
+  height: 20px;
+  background: radial-gradient(circle, #ffd966 0%, #ff8c00 60%, transparent 70%);
+  border-radius: 50%;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(0.9); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+/* ⬇️ INI YANG PENTING */
+.flame.off {
+  animation: blowOut 0.8s ease forwards;
+}
+
+@keyframes blowOut {
+  to {
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+}
+
+.exit-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+
+  background: #7a1e2b;
+  color: #fff;
+  font-weight: 600;
+
+  cursor: pointer;
+  z-index: 999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.6s ease;
+}
+
+.exit-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <h3>there's something for you :3</h3>
+    <h2>my sweetiee ex, miraaa (haninn) 💐🥳</h2>
+    <p>
+      eumm hariii iniii spesial bangettt, karenaaa oranggg yang pernahh palingg aku sayanggg lahir ke duniaaa
+    </p>
+    <button onclick="showMessage()">mw tau sesuatu gaa?</button>
+    </div>
+    
+     <!-- pesan 1 guys --> 
+    <div id="message1" class="hidden">
+    <p>
+      haiii miraaaa, eum lebih tepatnyaa haninn, selamat ulang tahun yangg ke lima belass tahunn yaaa, tepat pada hari inii umur kamuu bertambah satu tahunn, i wish kamu selalu lancarr dalamm segala urusan, i wish kamu bisa jadi pribadi yang lebih baik kedepannyaa, dann tambah dewasaa, makasihh udah jadi perempuan yang kuat buatt akuu selamaa inii, dan makasihh jugaa karenaa udah jadi perempuan yang hebatt, bahagia selalu yaa miraaaa
+    </p>
+ <button class="next-btn hidden-btn" onclick="goNext(1)">
+  Next ➜
+</button>
+    </div>
+    
+    <!-- pesan 2 guys -->
+    <div id="message2" class="hidden">
+    <p>
+    idk, sebelumnya kita udah ngejalanin banyak hal, udah banyak yang kita laluin, seneng sedihh barengg, i hopee nihh, di harii ulang tahun kamuu iniii, kamuu bisaaa jadii miraaa yangg lebihh baikk, lebihh sayangg ke semuaa orangg, sayang temenn dann keluargaaa jugaa, aku juga berharap di hari ulang tahun kamuu inii, kamuu bisaaa mengevaluasi kesalahan kesalahan kamuu dan perbaiki ituu sedikit demi sedikittt okeiii??
+teruss, aku mw mintaa maaf cumann bisaa kasii kadoo kata kata doang, iyaa aku akuinn akuu emangg cowo ga modal, gabisaa kek cowo cowo lainnya di luarr sanaa, aku gabisaa kasii kamuu bungaa, skincare, blablablaa dan lain lainn, maaf jugaa kaloo akuu selamaa inii mungkinn kadangg bikinn kamuu jengkel marahh blablabla, hahahaha salah siapaa lucuu, yaa pokoknyaa maaff gabisaa kasii yangg terbaikk, dann happyy birthdayyy miraaa✨💗💐
+    </p>
+    <button class="next-btn hidden-btn" onclick="goNext(2)">
+  Next ➜
+</button>
+    </div>
+    
+    <!-- pesan 3 guys -->
+    <div id="message3" class="hidden">
+    <p>
+    i'll remember all ur love speech, yangg kamuu sampein ke akuu, makasii banyakk miraaa, di bulan ramadhan ini aku harapp kamuu bisaa puasaa full, heheww, kitaa udah ngerelainn hubungann kitaa buatt bulann suci ini kann?? akuu gasabarr kitaa balikan buat yang kesekian kalinya wkwkwk (kemungkinan kecil, bahkan gamungkin, tapi aku bakal berusaha buat wujudin kemungkinan kecil itu!) jujur aku agak sebel sih sama keadaan ini, tapii, ini juga demi yang terbaik buat kitaa masingg masingg, wish youu all thee bestt, semangatt puasanyaa!
+    </p>
+    <button class="next-btn hidden-btn" onclick="goToFinalSlide()">Next ➜</button>
+</div>
+    
+    <div id="message4" class=" hidden">
+    <!-- FOTO -->
+<img src="bday.png" id="memoryPhoto" class="memory-photo">
+
+<!-- AUDIO -->
+<audio id="bgm" src="sgthtilove.mp3" loop></audio>
+   </div>
+ 
+  <!-- SCENE KUE (HIDDEN DARI AWAL) -->
+  <div id="candleScene" class="hidden">
+    <div class="cake">
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>
+
+  <div class="candle">
+  <div class="flame"></div>
+</div>
+
+<button id="blowBtn">make a wish and blow</button>
+<h1> jangan tiup kalo masih mau dengerin lagunyaa, i think u will like this song :)) just make a long wish for waiting</h1>
+
+
+
+
+
+  
+
+
+  <script>
+    function createHearts() {
+      for (let i = 0; i < 20; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 5 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 100000000);
+      }
+    }
+    
+    // beda
+    
+function showMessage() {
+  const bgm = document.getElementById("bgm");
+  const firstMsg = document.getElementById("message1");
+  const nextBtn = firstMsg.querySelector(".next-btn");
+
+  bgm.volume = 0.5;
+  bgm.play().catch(() => {});
+
+  document.getElementById("card").style.display = "none";
+
+  firstMsg.classList.remove("hidden");
+  void firstMsg.offsetWidth;
+  firstMsg.classList.add("fade-in");
+
+  createHearts();
+
+// beda
+
+  // ⏳ delay tombol next
+  setTimeout(() => {
+    nextBtn.classList.remove("hidden-btn");
+    nextBtn.classList.add("show-btn");
+  }, 5000);
+}
+    
+    // beda
+    
+    function goNext(current) {
+  const currentMsg = document.getElementById("message" + current);
+  const nextId = "message" + (current + 1);
+
+  currentMsg.classList.add("hidden");
+  currentMsg.classList.remove("fade-in");
+
+  showMessageWithDelay(nextId);
+}
+
+// beda
+
+function showMessageWithDelay(messageId) {
+  const msg = document.getElementById(messageId);
+  const nextBtn = msg.querySelector(".next-btn");
+
+  // munculin message
+  msg.classList.remove("hidden");
+  void msg.offsetWidth;
+  msg.classList.add("fade-in");
+
+  // kalau message ini punya tombol next
+  if (nextBtn) {
+    // reset tombol
+    nextBtn.classList.add("hidden-btn");
+    nextBtn.classList.remove("show-btn");
+
+    // delay tombol
+    setTimeout(() => {
+      nextBtn.classList.remove("hidden-btn");
+      nextBtn.classList.add("show-btn");
+    }, 5000);
+  }
+}
+    
+    function goToFinalSlide() {
+  goNext(3); // masuk ke slide terakhir
+
+  setTimeout(() => {
+    const photo = document.getElementById("memoryPhoto");
+    const cake = document.getElementById("candleScene");
+
+    // pastiin kue tetap HILANG
+    cake.classList.add("hidden");
+
+    // INTRO FOTO
+    photo.classList.add("edo");
+
+    // SETELAH FOTO DINIKMATI → FADE OUT
+    setTimeout(() => {
+      photo.classList.add("disintegrate");
+
+      // SETELAH FOTO BENAR² HILANG → BARU MUNCUL KUE
+      setTimeout(() => {
+        cake.classList.remove("hidden");
+      }, 3000); // durasi fade out foto
+
+    }, 4500); // waktu lihat foto
+
+  }, 400);
+}
+
+document.getElementById("blowBtn").addEventListener("click", () => {
+  const flame = document.querySelector(".flame");
+
+  flame.classList.add("off"); // 🔥 lilin mati
+  document.getElementById("blowBtn").style.display = "none";
+
+  // ⏳ tunggu 4 detik, lalu balik ke awal
+  setTimeout(() => {
+    location.reload();
+  }, 4000);
+});
+
+  </script>
+
+</body>
+</html>
